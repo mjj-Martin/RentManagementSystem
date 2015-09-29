@@ -59,6 +59,7 @@
     "mockjs": "^0.1.10",
     "mongoose": "^4.1.9",
     "pngquant": "^0.5.0",
-    "yargs": "^3.26.0"
+    "yargs": "^3.26.0",
+    "handlebars": "^4.0.3"
   }
 }
