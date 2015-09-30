@@ -1,0 +1,27 @@
+{
+  "name": "apiManage",
+  "version": "0.0.1",
+  "description": "apiManage System",
+  "main": "",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "apiManage",
+    "System"
+  ],
+  "authors": [
+    "maJunJie"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
