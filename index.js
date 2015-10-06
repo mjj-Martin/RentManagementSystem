@@ -11,7 +11,7 @@ app.set("view engine",'handlebars');
 app.set("port",port);
 
 app.get('/',function(req,res){
-	res.render('page1');
+	
 	// res.type('text/html');
 	// res.status(400)
 	// res.send('调试成功');
