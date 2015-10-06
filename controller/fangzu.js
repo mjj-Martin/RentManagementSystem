@@ -1,9 +1,9 @@
 
-exports = {
-	fangzuRoutes : function(app){
+module.exports = {
+	registerRoutes : function(app){
 		app.get('/home',this.home);
 	},
-	home : function(res,req.next){
+	home : function(req,res,next){
 		res.render('page1');
 	}
 }
