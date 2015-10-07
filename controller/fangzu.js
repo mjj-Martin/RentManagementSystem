@@ -4,6 +4,6 @@ module.exports = {
 		app.get('/home',this.home);
 	},
 	home : function(req,res,next){
-		res.render('page1');
+		res.render('home');
 	}
 }

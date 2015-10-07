@@ -21,8 +21,9 @@ app.engine('handlebars',handlebars.engine);
 app.use(express.static('./'));
 app.set("view engine",'handlebars');
 app.set("port",port);
+
 require('./controller/fangzu.js').registerRoutes(app);
 
 app.listen(3001);
 
-console.log("已经打开端口为22"+port);
+console.log("已经打开端口为"+port);
