@@ -1,36 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		{{> head}}
-	</head>
-	<body class="no-skin">
-		
-		
-		{{> headNav}}
+<!doctype html>
+<html class="no-js fixed-layout">
+<head>
+  {{> head}}
+</head>
+<body>
 
-		{{> baseScript}}
-		<!-- /section:basics/navbar.layout -->
-		<div class="main-container" id="main-container">
-			<script type="text/javascript">
-				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
-			</script>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+{{{_sections.css}}}
+{{> headNav}}
 
-			{{> sideBar}}
+<div class="am-cf admin-main">
+  <!-- sidebar start -->
+  {{> sideBar}}
+  <!-- sidebar end -->
 
-			<!-- /section:basics/sidebar -->
-			<div class="main-content">
-				{{{body}}}
-			</div><!-- /.main-content -->
+  <!-- content start -->
+  <div class="admin-content">
 
-			{{> footer}}
+    {{{body}}}
+    {{> footer}}
+  </div>
+  <!-- content end -->
 
-			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-			</a>
-		</div><!-- /.main-container -->
+</div>
 
-		
-
-		
-	</body>
+<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+{{> baseScript}}
+{{{_sections.js}}}
+</body>
 </html>
