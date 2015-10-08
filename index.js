@@ -8,6 +8,9 @@ var handlebars = require('express3-handlebars').create({
 				}
 				this._sections[name] = options.fn(this);
 				return null;
+			},
+			static : function(name){
+				return require('./lib/config.js').statice(name);
 			}
 		}
 		// extname : ".hbs"
@@ -22,7 +25,11 @@ app.use(express.static('./'));
 app.set("view engine",'handlebars');
 app.set("port",port);
 
-require('./controller/fangzu.js').registerRoutes(app);
+// 引入路由注册
+require('./controller/home.js').registerRoutes(app);
+require('./controller/dataAnalysis.js').registerRoutes(app);
+require('./controller/fangzuManage.js').registerRoutes(app);
+
 
 app.listen(3001);
 
