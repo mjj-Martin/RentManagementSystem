@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>房租首页</title>
-	{{> meta}}
-</head>
-<body>
-	{{> headNav}}
-	<div class="container">
-		{{{body}}}
-	</div>
-	{{{_sections.test}}}
-</body>
+	<head>
+		{{> head}}
+	</head>
+	<body class="no-skin">
+		
+		
+		{{> headNav}}
+
+		{{> baseScript}}
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			{{> sideBar}}
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				{{{body}}}
+			</div><!-- /.main-content -->
+
+			{{> footer}}
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		
+
+		
+	</body>
 </html>
